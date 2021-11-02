@@ -6,6 +6,7 @@ loc = {1:"Dwaraka Nagar",2:"Beach Road",3:"Gajuwaka",4:"Madurawada"}
 modeof = {1:"Bus",2:"Car",3:"Auto",4:"Cab"}
 minimumfare = {1:10,2:20,3:5,4:7}
 costperkm = {1:2,2:10,3:3,4:4}
+time = {1:50,2:80,3:30,4:40}
 while True:
     try:
         start = int(input("""
@@ -57,5 +58,7 @@ if start==end:
     print("Start and Destination Locations are Same")
 else:
     print(f"""The total distance from {loc[start]} to {loc[end]} is : {dist}
-Cost for {modeof[mode]}:{minimumfare[mode]+(dist*costperkm[mode])}""")
+Cost for {modeof[mode]}:{minimumfare[mode]+(dist*costperkm[mode])}
+ Estimated total time: {dist/time[mode]}
+""")
         
